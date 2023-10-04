@@ -10,8 +10,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="start"
         android:layout_margin="10dp"
+        android:gravity="start"
         android:text="Explicit intent" />
 
     <Button
@@ -24,9 +24,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="start"
         android:layout_margin="10dp"
-        android:text="Implicit intent" />
+        android:gravity="start"
+        android:text="Implicit intents" />
 
     <Button
         android:id="@+id/webBrowserBtn"
@@ -34,6 +34,34 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="Open browser" />
+
+    <Button
+        android:id="@+id/callBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Make call" />
+
+    <Button
+        android:id="@+id/cameraBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Open Camera" />
+
+    <Button
+        android:id="@+id/galleryBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Open Gallery" />
+
+    <Button
+        android:id="@+id/alarmBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Set Alarm" />
 
 
 </LinearLayout>
