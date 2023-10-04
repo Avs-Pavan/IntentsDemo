@@ -13,6 +13,15 @@ import com.kevin.intents.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
+
+    private val alarmIntent: Intent by lazy {
+        Intent(AlarmClock.ACTION_SHOW_ALARMS)
+    }
+
+    private val callIntent by lazy {
+        Intent(Intent.ACTION_CALL)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -45,12 +54,10 @@ class MainActivity : AppCompatActivity() {
             openCamera()
         }
 
-
     }
 
     private fun setAlarm() {
-        val intent = Intent(AlarmClock.ACTION_SHOW_ALARMS)
-        startActivity(intent)
+        startActivity(alarmIntent)
     }
 
     private fun openGallery() {
@@ -64,7 +71,6 @@ class MainActivity : AppCompatActivity() {
     private fun makeCall() {
 
         val phone = "+13612532921"
-        val callIntent = Intent(Intent.ACTION_CALL)
         callIntent.data = Uri.parse("tel:$phone")
 
         if (ActivityCompat.checkSelfPermission(
